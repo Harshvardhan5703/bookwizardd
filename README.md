@@ -35,8 +35,8 @@ Welcome to the Book Recommendation System! 🌟 This dynamic web application is 
 To set up the project locally, follow these steps:
 Clone the repository:
 
-git clone https://github.com/Harshit130127/Machinelearning_based_Bookrecommendation.git
-cd Machinelearning_based_Bookrecommendation
+git clone https://github.com/Harshvardhan5703/bookwizardd.git
+cd bookwizardd
 
 Install the required packages:
 
@@ -48,7 +48,7 @@ Place your books.csv file in the dataset directory.
 Run the application:
 python app.py
 
-Access the application in your browser at http://127.0.0.1:5000 after run python app.py
+Access the application in your browser at http://127.0.0.1:5000 after running python app.py
 
 💻 Usage
 Navigate to the home page.
@@ -73,9 +73,5 @@ User Interface: Built with HTML/CSS for structure and styling, enhanced with Jav
 🤝 Contributors
 This project is maintained by:
 Harshit Mishra 👤
-Harshit Khandelwal 👤
 Harshvardhan Singh Shekhawat 👤
-Mayank Upadhyay 👤
-Krishna Kumar 👤
-Mohit Kumar 👤
-Madhav Kumar 👤
+
