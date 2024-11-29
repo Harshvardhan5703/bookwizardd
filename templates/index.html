@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Bookwizard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<!-- Navbar -->
+<div class="navbar">
+    <a href="#hero">Home</a>
+    <a href="#recommendations">Learn More</a>
+    <a href="#search-title">Search by Title</a>
+    <a href="#search-rating">Search by Rating</a>
+    <a href="#search-publisher">Search by Publisher</a>
+    <a href="#search-author">Search by Author</a>
+</div>
+
+<!-- Hero Section -->
+<section id="hero" class="section hero">
+    <h1 id="flashing-text">
+        <span>B</span>
+        <span>O</span>
+        <span>O</span>
+        <span>K</span>
+        <span>W</span>
+        <span>I</span>
+        <span>Z</span>
+        <span>A</span>
+        <span>R</span>
+        <span>D</span>
+      </h1>
+    <!-- <p>Discover your next great read! Get personalized book recommendations based on your favorite titles, minimum ratings, or preferred publishers. Dive into a world of books tailored just for you!</p> -->
+    <a id="start" href="#recommendations">Get Started</a>
+</section>
+
+<section id="recommendations" class="section">
+    <h2>Bookwizard is a book recommendation system that gives you the names of books on the basis of ratings, publisher and Title of the book.</h2>
+</section>
+
+<!-- Search by Book Title Section -->
+<section id="search-title" class="section">
+    <h2>Search by Book Title</h2>
+    <form id="search-form" action="/recommend_by_book" method="POST">
+        <input type="text" id="book_name" name="book_name" placeholder="Enter book name" required autocomplete="off">
+        <div id="suggestions" class="suggestions"></div>
+        <button type="submit"><i class="fas fa-search"></i> Get Recommendations by Book</button>
+    </form>
+</section>
+
+<!-- Search by Rating Section -->
+<section id="search-rating" class="section">
+    <h2>Search by Minimum Rating</h2>
+    <form action="/recommend_by_rating" method="GET">
+        <input type="number" step="0.1" name="rating" placeholder="Enter minimum rating" required>
+        <button type="submit"><i class="fas fa-search"></i> Get Recommendations by Rating</button>
+    </form>
+</section>
+
+<!-- Search by Publisher Section -->
+<section id="search-publisher" class="section">
+    <h2>Search by Publisher</h2>
+    <form action="/recommend_by_publisher" method="POST">
+        <input type="text" name="publisher" placeholder="Enter publisher's name" required>
+        <button type="submit"><i class="fas fa-search"></i> Get Recommendations by Publisher</button>
+    </form>
+</section>
+
+
+<!-- Search by Author Section -->
+<section id="search-author" class="section">
+    <h2>Search by Author</h2>
+    <form action="/recommend_by_author" method="POST">
+        <input type="text" name="author" placeholder="Enter author's name" required>
+        <button type="submit"><i class="fas fa-search"></i> Get Recommendations by Author</button>
+    </form>
+</section>
+
+
+
+<script>
+    // JavaScript for live search suggestions
+    
+  // JavaScript for live search suggestions
+const input = document.getElementById('book_name');
+const suggestions = document.getElementById('suggestions');
+
+// Hide suggestions initially
+suggestions.style.display = 'none';
+
+input.addEventListener('input', async () => {
+    const query = input.value.trim();
+    if (query.length > 0) {
+        const response = await fetch(`/search_books?query=${encodeURIComponent(query)}`);
+        const data = await response.json();
+
+        // Clear previous suggestions
+        suggestions.innerHTML = '';
+
+        // Populate new suggestions
+        if (data.length > 0) {
+            data.forEach(book => {
+                const suggestionItem = document.createElement('div');
+                suggestionItem.textContent = book;
+                suggestionItem.addEventListener('click', () => {
+                    input.value = book; // Set input value to clicked suggestion
+                    suggestions.innerHTML = ''; // Clear suggestions
+                    suggestions.style.display = 'none'; // Hide suggestions after selection
+                    document.getElementById('search-form').submit(); // Submit the form with selected title
+                });
+                suggestions.appendChild(suggestionItem);
+            });
+            suggestions.style.display = 'block'; // Show dropdown if there are suggestions
+        } else {
+            const noResultsItem = document.createElement('div');
+            noResultsItem.textContent = 'No results found';
+            suggestions.appendChild(noResultsItem);
+            suggestions.style.display = 'block'; // Show dropdown even if no results found
+        }
+    } else {
+        suggestions.innerHTML = ''; // Clear suggestions if input is empty
+        suggestions.style.display = 'none'; // Hide dropdown when input is empty
+    }
+});
+
+// Hide suggestions when clicking outside
+document.addEventListener('click', (event) => {
+    if (!event.target.closest('#search-form')) {
+        suggestions.innerHTML = ''; // Clear suggestions when clicking outside
+        suggestions.style.display = 'none'; // Hide dropdown when clicking outside
+    }
+});
+</script>
+    
+    </body>
+    </html>

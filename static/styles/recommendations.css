@@ -1,0 +1,96 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    background-image: url('/static/styles/WhatsApp\ Image\ 2024-11-27\ at\ 14.57.11_506773ba.jpg');
+    background-attachment: fixed;
+    color: #333;
+}
+
+h1, h2 {
+    color: #3a3a3a;
+    text-align: center;
+}
+
+.results {
+    margin: 20px auto;
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+}
+
+.results li {
+    background-color: #e9ecef;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.pagination {
+    text-align:center;
+    margin-top:20px;
+}
+
+.pagination a {
+    margin-right:10px;
+    text-decoration:none;
+    color:#007bff; /* Link color */
+}
+
+.navbar {
+   display: flex;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   justify-content: space-around;
+   background-color: rgba(0, 123, 255, 0.9); /* Slightly transparent blue */
+   background: linear-gradient(to right, rgb(58, 28, 113), rgb(215, 109, 119), rgb(255, 175, 123));
+   padding: 1rem;
+   z-index: 1000;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+   backdrop-filter: blur(8px); /* Adds a blur effect for a frosted glass look */
+}
+
+/* Navbar link styling */
+.navbar a {
+   color: rgb(0, 0, 0);
+   text-decoration: none;
+   padding: 0.5rem 1rem;
+   font-size: 1.2rem;
+   font-weight: 600;
+   position: relative;
+   transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for links */
+.navbar a:hover {
+   color: #ffcccb; /* Light coral color on hover */
+   transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Underline effect on hover */
+.navbar a::after {
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: -3px;
+   width: 100%;
+   height: 2px;
+   background-color: #ffcccb;
+   transform: scaleX(0);
+   transition: transform 0.3s ease;
+}
+
+.navbar a:hover::after {
+   transform: scaleX(1); 
+}
+
+      /* Footer Styling */
+      .footer {
+        background-color: #333; 
+        color: white; 
+        padding: 20px; 
+        text-align: center; 
+    }

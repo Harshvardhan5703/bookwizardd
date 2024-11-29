@@ -1,0 +1,68 @@
+/* Common Form Styling */
+.auth-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, rgba(58, 28, 113, 0.8), rgba(215, 109, 119, 0.8));
+}
+
+.auth-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.auth-form h2 {
+    margin-bottom: 20px;
+    color: #3a3a3a;
+    font-size: 1.8rem;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="password"],
+.auth-form input[type="email"],
+.auth-form button {
+    width: calc(100% - 20px);
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.auth-form input:focus {
+    border-color: rgba(58, 28, 113, 0.8);
+    outline: none;
+    box-shadow: 0 0 5px rgba(58, 28, 113, 0.4);
+}
+
+.auth-form button {
+    background: radial-gradient(circle at 10% 50.5%, rgb(255, 107, 6) 0%, rgb(255, 1, 107) 90%);
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.auth-form button:hover {
+    background-color: #ff6b6b;
+    transform: scale(1.05);
+}
+
+/* Link for switching between Sign-In and Sign-Up */
+.auth-form a {
+    color: rgba(58, 28, 113, 0.8);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.auth-form a:hover {
+    text-decoration: underline;
+}

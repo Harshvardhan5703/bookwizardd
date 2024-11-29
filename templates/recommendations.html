@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Book Recommendations</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='styles/recommendations.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+   <a href="/">Home</a>
+</div>
+
+<h1> 😁</h1>
+
+<h2>Based on your search:</h2>
+
+<ul class="results">
+    {% if title_recommendations %}
+    <h3> Recommendations based on Book: {{ input_book }} </h3>  <!-- Display input book name -->
+    <ul>
+        {% for title in title_recommendations %}
+            <li>{{ loop.index }}. {{ title }}</li>  <!-- Sequence number added here -->
+        {% endfor %}
+    </ul>
+{% endif %}
+    
+    {% if rating_recommendations %}
+        <h3>Rating Recommendations :</h3>
+        {% for rating in rating_recommendations %}
+            <li>{{ loop.index }}. {{ rating }}</li>  <!-- Sequence number added here -->
+        {% endfor %}
+    {% endif %}
+    
+    {% if publisher_recommendations %}
+    <h3>Book Recommendations based on Publisher: {{ input_publisher }} </h3>  <!-- Display input publisher name -->
+    <ul>
+        {% for recommendation in publisher_recommendations %}
+            <li>{{ loop.index }}. {{ recommendation }}</li>  <!-- Sequence number added here -->
+        {% endfor %}
+    </ul>
+{% endif %}
+
+    {% if author_recommendations %}
+        <h3>Book Recommendations for author: {{author}} </h3>
+        {% for author in author_recommendations %}
+            <li>{{ loop.index }}. {{ author }}</li>  <!-- Sequence number added here -->
+        {% endfor %}
+    {% endif %}
+ </ul>
+
+<!-- Pagination Controls -->
+<div class="pagination">
+   {% if current_page > 1 %}
+       <a href="{{ url_for('recommend_by_rating_route', page=current_page - 1, rating=request.form.get('rating')) }}">Previous</a>
+   {% endif %}
+
+   <span>Page {{ current_page }} of {{ total_pages }}</span>
+
+   {% if current_page < total_pages %}
+       <a href="{{ url_for('recommend_by_rating_route', page=current_page + 1, rating=request.form.get('rating')) }}">Next</a>
+   {% endif %}
+</div>
+
+</body>
+</html>

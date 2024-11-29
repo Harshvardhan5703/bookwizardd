@@ -1,0 +1,265 @@
+        /* General Styling */
+        body {
+            font-family:'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5; /* Light background */
+            color: #333; /* Dark text for contrast */
+            overflow-x: hidden;
+            background-image: url('/static/styles/WhatsApp\ Image\ 2024-11-27\ at\ 14.57.11_506773ba.jpg');
+        }
+
+        h1, h2, h3 {
+            color: #3a3a3a; /* Consistent heading color */
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            justify-content: space-around;
+            background-color: rgba(0, 123, 255, 0.9); /* Slightly transparent blue */
+            background: linear-gradient(to right, rgb(58, 28, 113), rgb(215, 109, 119), rgb(255, 175, 123));
+            padding: 1rem;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+            backdrop-filter: blur(8px); /* Adds a blur effect for a frosted glass look */
+        }
+
+        /* Navbar link styling */
+        .navbar a {
+            color: rgb(12, 12, 12);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Hover effect for links */
+        .navbar a:hover {
+            color: #ffcccb; /* Light coral color on hover */
+            transform: translateY(-3px); /* Slight lift effect */
+        }
+
+        /* Underline effect on hover */
+        .navbar a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 100%;
+            height: 2px;
+            background-color: #ffcccb;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .navbar a:hover::after {
+            transform: scaleX(1); 
+        }
+        
+        /* Section Styling */
+        .section {
+            padding: 0; /* Reset padding to use full height */
+            text-align: center;
+            height: 100vh; /* Ensure sections take full viewport height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .hero {
+            /* background: linear-gradient(to right, #ff7e5f, #feb47b);  */
+            /* background-image: url('images\background-7417626_640.jpg'); */
+            background-position: center;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            background-image: 
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), 
+            url('/static/styles/WhatsApp\ Image\ 2024-11-27\ at\ 14.57.19_1bd4501d.jpg');
+            background-attachment: fixed;
+
+        }
+       
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero a {
+            background: #fff;
+            color: #ff7e5f;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .hero a:hover {
+            background: #ff7e5f;
+            color: white;
+        }
+
+        /* Form Styling */
+        form {
+          margin: 20px auto; 
+          padding: 20px; 
+          background-color: #ffffff; 
+          border-radius: 8px; 
+          border: solid #000;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+          box-shadow: 0px 0px 16px 12px rgba(232, 26, 26, 0.2);
+          max-width: 400px; 
+      }
+
+      input[type="text"],
+      input[type="number"],
+      button {
+          width: calc(100% - 20px); 
+          padding: 10px; 
+          margin-top: 10px; 
+          border-radius: 5px ; 
+          border: 1px solid #ccc; 
+          justify-content: center;
+      }
+
+      button {
+          background-color: #007bff; 
+          background: radial-gradient(circle at 10% 50.5%, rgb(255, 107, 6) 0%, rgb(255, 1, 107) 90%);
+          color: white; 
+          font-weight: bold; 
+          cursor: pointer; 
+          border: none; 
+      }
+
+      button:hover {
+          background-color: #0056b3; 
+      }
+     
+   /* Suggestions Styling */
+.suggestions {
+    position: absolute; /* Position the dropdown relative to the input */
+    background-color: white; /* Background color for suggestions */
+    border: 1px solid #ccc; /* Light gray border for the dropdown */
+    z-index: 1000; /* Ensure dropdown appears above other elements */
+    max-height: 150px; /* Maximum height for the dropdown */
+    overflow-y: auto; /* Enable vertical scrolling if suggestions exceed max height */
+    width: calc(100% - 20px); /* Full width minus padding/margins */
+    display: none; /* Start hidden to prevent showing on page load */
+}
+
+.suggestions div {
+    padding: 10px; /* Padding for each suggestion */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+}
+
+.suggestions div:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+}
+
+
+      /* Footer Styling */
+      .footer {
+          background-color: #333; 
+          color: white; 
+          padding: 20px; 
+          text-align: center; 
+      }
+
+      /* Results Styling */
+      .results {
+          margin-top: 20px; 
+          list-style-type: none; 
+          padding: 0; 
+      }
+
+      .results li {
+          background-color: #e9ecef; 
+          margin: 5px 0; 
+          padding: 10px; 
+          border-radius: 5px; 
+      }
+
+      /* Additional Section Styles for Consistency */
+      .other-section {
+          background-color: #ffffff; /* Light background for other sections */
+          height: 100vh; /* Full viewport height */
+          display: flex; 
+          align-items: center; 
+          justify-content: center; 
+          flex-direction: column; 
+      }
+
+
+      /* Pagination Controls */
+      .pagination {
+           text-align: center;
+           margin-top: 20px
+       }
+       
+       .pagination a {
+           margin-right: 10px
+       }
+
+       #flashing-text {
+        font-size: 4rem; /* Increase the font    size */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+    }
+    
+    #flashing-text span {
+        display: inline-block;
+        color: #000;
+        font-weight: bold;
+        text-transform: uppercase;
+        animation: glow-animation 1.5s ease-in-out infinite, flash-animation 2s linear infinite;
+    }
+    
+    /* Glowing effect on each letter */
+    @keyframes glow-animation {
+        0%, 100% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5); }
+        50% { text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(0, 255, 255, 1), 0 0 40px rgba(0, 255, 255, 1); }
+    }
+    
+    /* Flashing or tubelight effect */
+    @keyframes flash-animation {
+        0% { opacity: 0.5; }
+        25% { opacity: 1; }
+        50% { opacity: 0.5; }
+        75% { opacity: 1; }
+        100% { opacity: 0.5; }
+    }
+    
+    /* Adding slight delays to make each letter flash independently */
+    #flashing-text span:nth-child(1) { animation-delay: 0s; }
+    #flashing-text span:nth-child(2) { animation-delay: 0.1s; }
+    #flashing-text span:nth-child(3) { animation-delay: 0.2s; }
+    #flashing-text span:nth-child(4) { animation-delay: 0.3s; }
+    #flashing-text span:nth-child(5) { animation-delay: 0.4s; }
+    #flashing-text span:nth-child(6) { animation-delay: 0.5s; }
+    #flashing-text span:nth-child(7) { animation-delay: 0.6s; }
+    #flashing-text span:nth-child(8) { animation-delay: 0.7s; }
+    #flashing-text span:nth-child(9) { animation-delay: 0.8s; }
+    #flashing-text span:nth-child(10) { animation-delay: 0.9s; }
+    
+    #start{
+        margin-top: 190px;
+        /* margin-right: 5px; */
+    }
+
+    

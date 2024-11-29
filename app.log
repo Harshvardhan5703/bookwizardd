@@ -1,0 +1,43 @@
+2024-11-29 20:02:13,290 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.66.47:5000
+2024-11-29 20:02:13,291 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-29 20:02:13,297 - INFO -  * Restarting with stat
+2024-11-29 20:02:16,223 - WARNING -  * Debugger is active!
+2024-11-29 20:02:16,228 - INFO -  * Debugger PIN: 134-123-446
+2024-11-29 20:03:11,751 - INFO - Accessed the index page.
+2024-11-29 20:03:11,790 - INFO - 127.0.0.1 - - [29/Nov/2024 20:03:11] "GET / HTTP/1.1" 200 -
+2024-11-29 20:03:11,955 - INFO - 127.0.0.1 - - [29/Nov/2024 20:03:11] "GET /static/styles/index.css HTTP/1.1" 200 -
+2024-11-29 20:03:12,473 - INFO - 127.0.0.1 - - [29/Nov/2024 20:03:12] "GET /static/styles/WhatsApp%20Image%202024-11-27%20at%2014.57.11_506773ba.jpg HTTP/1.1" 200 -
+2024-11-29 20:03:12,775 - INFO - 127.0.0.1 - - [29/Nov/2024 20:03:12] "GET /static/styles/WhatsApp%20Image%202024-11-27%20at%2014.57.19_1bd4501d.jpg HTTP/1.1" 200 -
+2024-11-29 20:03:14,087 - INFO - 127.0.0.1 - - [29/Nov/2024 20:03:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-29 20:03:33,008 - INFO - 127.0.0.1 - - [29/Nov/2024 20:03:33] "GET /search_books?query=h HTTP/1.1" 200 -
+2024-11-29 20:03:33,793 - INFO - 127.0.0.1 - - [29/Nov/2024 20:03:33] "GET /search_books?query=ha HTTP/1.1" 200 -
+2024-11-29 20:03:37,466 - INFO - Received book recommendation request for: Harry Potter and the Half-Blood Prince (Harry Potter  #6)
+2024-11-29 20:03:37,535 - INFO - Recommendations found for Harry Potter and the Half-Blood Prince (Harry Potter  #6): ['Harry Potter and the Half-Blood Prince (Harry Potter  #6) by J.K. Rowling', 'Harry Potter and the Order of the Phoenix (Harry Potter  #5) by J.K. Rowling', 'The Fellowship of the Ring (The Lord of the Rings  #1) by J.R.R. Tolkien', 'Harry Potter and the Prisoner of Azkaban (Harry Potter  #3) by J.K. Rowling', 'Harry Potter and the Chamber of Secrets (Harry Potter  #2) by J.K. Rowling', 'Animal Farm by George Orwell', 'Lord of the Flies by William Golding', 'The Lightning Thief (Percy Jackson and the Olympians  #1) by Rick Riordan', 'Romeo and Juliet by William Shakespeare', 'Angels & Demons (Robert Langdon  #1) by Dan Brown', 'Of Mice and Men by John Steinbeck', 'The Hobbit  or There and Back Again by J.R.R. Tolkien', 'The Catcher in the Rye by J.D. Salinger', 'The Da Vinci Code (Robert Langdon  #2) by Dan Brown', 'The Giver (The Giver  #1) by Lois Lowry', 'The Alchemist by Paulo Coelho', 'The Book Thief by Markus Zusak', 'Little Women by Louisa May Alcott', 'Jane Eyre by Charlotte Brontë', "Charlotte's Web by E.B. White", 'Memoirs of a Geisha by Arthur Golden', 'Eat  Pray  Love by Elizabeth Gilbert', 'Water for Elephants by Sara Gruen', 'Brave New World by Aldous Huxley', 'The Notebook (The Notebook  #1) by Nicholas Sparks', 'The Secret Life of Bees by Sue Monk Kidd', 'The Curious Incident of the Dog in the Night-Time by Mark Haddon', 'The Adventures of Huckleberry Finn (Adventures of Tom and Huck  #2) by Mark Twain', 'Gone with the Wind by Margaret Mitchell', 'Slaughterhouse-Five by Kurt Vonnegut Jr.']
+2024-11-29 20:03:37,553 - INFO - 127.0.0.1 - - [29/Nov/2024 20:03:37] "POST /recommend_by_book HTTP/1.1" 200 -
+2024-11-29 20:03:37,609 - INFO - 127.0.0.1 - - [29/Nov/2024 20:03:37] "GET /static/styles/recommendations.css HTTP/1.1" 200 -
+2024-11-29 20:03:37,720 - INFO - 127.0.0.1 - - [29/Nov/2024 20:03:37] "[36mGET /static/styles/WhatsApp%20Image%202024-11-27%20at%2014.57.11_506773ba.jpg HTTP/1.1[0m" 304 -
+2024-11-29 20:03:45,129 - INFO - Accessed the index page.
+2024-11-29 20:03:45,131 - INFO - 127.0.0.1 - - [29/Nov/2024 20:03:45] "GET / HTTP/1.1" 200 -
+2024-11-29 20:03:45,393 - INFO - 127.0.0.1 - - [29/Nov/2024 20:03:45] "[36mGET /static/styles/index.css HTTP/1.1[0m" 304 -
+2024-11-29 21:06:14,683 - INFO - Accessed the index page.
+2024-11-29 21:06:14,702 - INFO - 127.0.0.1 - - [29/Nov/2024 21:06:14] "GET / HTTP/1.1" 200 -
+2024-11-29 21:06:14,770 - INFO - 127.0.0.1 - - [29/Nov/2024 21:06:14] "GET /static/styles/index.css HTTP/1.1" 200 -
+2024-11-29 21:06:14,923 - INFO - 127.0.0.1 - - [29/Nov/2024 21:06:14] "[33mGET /static/styles/KNNBookRecstaticstyles%0Bg1.jpg HTTP/1.1[0m" 404 -
+2024-11-29 21:06:15,097 - INFO - 127.0.0.1 - - [29/Nov/2024 21:06:15] "[36mGET /static/styles/WhatsApp%20Image%202024-11-27%20at%2014.57.19_1bd4501d.jpg HTTP/1.1[0m" 304 -
+2024-11-29 21:06:17,996 - INFO - Accessed the index page.
+2024-11-29 21:06:17,997 - INFO - 127.0.0.1 - - [29/Nov/2024 21:06:17] "GET / HTTP/1.1" 200 -
+2024-11-29 21:06:18,051 - INFO - 127.0.0.1 - - [29/Nov/2024 21:06:18] "[36mGET /static/styles/index.css HTTP/1.1[0m" 304 -
+2024-11-29 21:06:18,306 - INFO - Accessed the index page.
+2024-11-29 21:06:18,307 - INFO - 127.0.0.1 - - [29/Nov/2024 21:06:18] "GET / HTTP/1.1" 200 -
+2024-11-29 21:06:18,635 - INFO - 127.0.0.1 - - [29/Nov/2024 21:06:18] "[36mGET /static/styles/index.css HTTP/1.1[0m" 304 -
+2024-11-29 21:06:21,430 - INFO - Accessed the index page.
+2024-11-29 21:06:21,431 - INFO - 127.0.0.1 - - [29/Nov/2024 21:06:21] "GET / HTTP/1.1" 200 -
+2024-11-29 21:06:21,701 - INFO - 127.0.0.1 - - [29/Nov/2024 21:06:21] "[36mGET /static/styles/index.css HTTP/1.1[0m" 304 -
+2024-11-29 21:06:49,151 - INFO - Accessed the index page.
+2024-11-29 21:06:49,152 - INFO - 127.0.0.1 - - [29/Nov/2024 21:06:49] "GET / HTTP/1.1" 200 -
+2024-11-29 21:06:49,467 - INFO - 127.0.0.1 - - [29/Nov/2024 21:06:49] "GET /static/styles/index.css HTTP/1.1" 200 -
+2024-11-29 21:06:49,495 - INFO - 127.0.0.1 - - [29/Nov/2024 21:06:49] "[33mGET /static/styles/gKNNBookRecstaticstyles%0Bg1.jpg HTTP/1.1[0m" 404 -
+2024-11-29 21:06:49,727 - INFO - 127.0.0.1 - - [29/Nov/2024 21:06:49] "[36mGET /static/styles/WhatsApp%20Image%202024-11-27%20at%2014.57.19_1bd4501d.jpg HTTP/1.1[0m" 304 -
